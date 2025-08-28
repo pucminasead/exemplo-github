@@ -12,6 +12,11 @@ def soma(x: int, y: int):
     return {"soma": x+y}
 
 
+@app.get("/multiplicacao/")
+def multiplicacao(x: int, y: int):
+    return {"multiplicacao": x*y}
+
+
 @app.get("/potencia/")
 def potencia(base: int, expoente: int):
     return {"potencia": base ** expoente}
@@ -31,4 +36,5 @@ def raiz_quadrada(radicando: int):
 @app.get("/divisao/")
 def divisao(x: int, y:int):
     return {"divisao": x / y}
+
 
