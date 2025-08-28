@@ -9,3 +9,7 @@ def home():
 @app.get("/soma/")
 def soma(x: int, y: int):
     return {"soma": x+y}
+
+@app.get("/divisao/")
+def divisao(x: int, y:int):
+    return {"divisao": x / y}
