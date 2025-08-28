@@ -9,3 +9,7 @@ def home():
 @app.get("/soma/")
 def soma(x: int, y: int):
     return {"soma": x+y}
+
+@app.get("/potencia/")
+def potencia(base: int, expoente: int):
+    return {"potencia": base ** expoente}
