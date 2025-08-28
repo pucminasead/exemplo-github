@@ -13,7 +13,7 @@ def soma(x: int, y: int):
 
 @app.get("/subtracao/")
 def subtracao(x: int, y: int):
-    return {"soma": x-y}
+    return {"subtração": x-y}
 
 @app.get("/raizCubica/")
 def raizC(num: int):
