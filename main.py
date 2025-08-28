@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+
 app = FastAPI()
 
 @app.get("/")
@@ -10,6 +11,30 @@ def home():
 def soma(x: int, y: int):
     return {"soma": x+y}
 
+
 @app.get("/multiplicacao/")
 def multiplicacao(x: int, y: int):
     return {"multiplicacao": x*y}
+
+
+@app.get("/potencia/")
+def potencia(base: int, expoente: int):
+    return {"potencia": base ** expoente}
+
+@app.get("/subtracao/")
+def subtracao(x: int, y: int):
+    return {"subtração": x-y}
+
+@app.get("/raizCubica/")
+def raizC(num: int):
+    return {f'raiz cubica = {num ** (1/3)}'}
+
+@app.get("/raiz-quadrada/")
+def raiz_quadrada(radicando: int):
+    return {f"raiz quadrada de {radicando}": radicando ** (1/2)}
+
+@app.get("/divisao/")
+def divisao(x: int, y:int):
+    return {"divisao": x / y}
+
+
