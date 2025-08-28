@@ -11,6 +11,11 @@ def home():
 def soma(x: int, y: int):
     return {"soma": x+y}
 
+
+@app.get("/potencia/")
+def potencia(base: int, expoente: int):
+    return {"potencia": base ** expoente}
+
 @app.get("/subtracao/")
 def subtracao(x: int, y: int):
     return {"subtração": x-y}
